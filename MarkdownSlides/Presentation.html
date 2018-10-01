@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      body { 
+          font-family: 'Segoe UI'; 
+          color: #eee;
+      }      
+      h1, h2, h3 {        
+        font-weight: 600;
+      }
+      .remark-slide-content h1 {
+          font-weight: bold;
+          color: orange;
+          font-size: 2.5rem;
+      }
+
+      ul>li {
+          color: goldenrod;
+      }
+      ul>li>ul>li {
+          color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+            class: center, middle
+            background-image: url(background.jpg)
+            
+            # Marking up the World with Markdown
+            ### taking back control from WYSIWYG editing
+            
+                        
+            
+            .right[by Rick Strahl]            
+            .right[West Wind Technologies]
+            .right[[@RickStrahl](https://twitter.com/rickstrahl)]
+            .right[rstrahl@wwest-wind.com]
+            
+            </div>
+            
+            ---
+
+            background-image: url(background.jpg)
+            
+            # What is Markdown
+            
+            * **Markup Text Language**
+                * Text based markup language
+                * Very easy to learn
+                * Uses simple symbols to represent common HTML concepts
+                * Very typable
+                * Great for developer related text
+            
+            * **Markdown and HTML**  
+                * Markdown only supports limited HTML features
+                * But you can embed and mix-in HTML
+                * Markdown provides most common editing features
+            
+            ---
+            
+            class: center, bmiddle
+            background-image: url(background.jpg)
+            
+            # What does Markdown Look like?
+            
+            ![](MarkdownInEditor.png)
+            
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+          highlightStyle: "zenburn"
+      });      
+    </script>
+  </body>
+</html>
