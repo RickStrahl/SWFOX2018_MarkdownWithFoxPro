@@ -11,16 +11,6 @@
         body {
             margin: 10px 40px;
         }
-        .formatted {
-            font-weight: bold;
-            background: #eee;            
-            padding: 15px;
-            border-radius: 4px;
-            font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-        }
-        .indent {
-            margin: 5% 2%;
-        }
         blockquote {
 		    background: #f2f7fb;
 		    font-size: 1.02em;
@@ -32,7 +22,7 @@
         @media(max-width: 600px) 
         {
             body, html {
-                font-size: 15px !important;
+                font-size: 14px !important;
             }
             body {
                 margin: 10px 10px !important;                
@@ -45,8 +35,8 @@
 		<%= lcParsedHtml %>
 	</div>
 	
-	<script src="https://weblog.west-wind.com/scripts/highlightjs/highlight.pack.js" type="text/javascript"></script>
-	<link href="https://weblog.west-wind.com/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" type="text/css" />
+	<script src="https://weblog.west-wind.com/scripts/highlightjs/highlight.pack.js"></script>
+	<link href="https://weblog.west-wind.com/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
 	<script>
 		function highlightCode() {
 		    var pres = document.querySelectorAll("pre>code");

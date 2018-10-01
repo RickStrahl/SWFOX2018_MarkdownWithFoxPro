@@ -6,10 +6,6 @@ CLEAR
 
 *** Straight Code
 #IF .f.
-LOCAL loBridge as wwDotNetBridge
-loBridge = GetwwDotnetBridge()
-loBridge.LoadAssembly("Markdig.dll")
-
 TEXT TO lcMarkdown NOSHOW
 # RAW MARKDOWN WITH Markdig
 
@@ -23,23 +19,21 @@ Great it works!
 
 > ### Examples are great
 > This is a block quote with a header
-
-
 ENDTEXT
 
-*
+*** Render Markdown to HTML here
+loBridge = GetwwDotnetBridge()
+loBridge.LoadAssembly("Markdig.dll")
 lcHtml = loBridge.InvokeStaticMethod("Markdig.Markdown","ToHtml",lcMarkdown,null)
 
 ? lcHtml
-_cliptext = lcHtml
 ShowHtml(lcHtml)
+
 RETURN
 #ENDIF
 
 *** Using a class
 #IF .F.
-loParser = CREATEOBJECT("MarkdownParser")
-loParser.lSanitizeHtml = .T.
 
 
 TEXT TO lcMarkdown NOSHOW
@@ -49,18 +43,27 @@ This is some sample Markdown text. This text is **bold** and *italic*.
 * List Item 2
 * List Item 3
 
-
-<script>alert('Gotcha!')</script>
 Great it works!
 
 > #### Examples are great
 > This is a block quote with a header
+
 ENDTEXT
 
+DO MarkdownParser
 
+*** use the MarkdownParser object (most control)
+loParser = CREATEOBJECT("MarkdownParser")
+loParser.lSanitizeHtml = .T.
 lcParsedHtml = loParser.Parse(lcMarkdown)
+
 ? lcParsedHtml
 ShowHtml(lcParsedHtml)
+
+*** use the Markdown() function (simpler and cached)
+lcParsedHtml = Markdown(lcMarkdown)
+? lcParsedHtml
+
 RETURN
 #ENDIF
 
@@ -84,7 +87,7 @@ Great it works!
 > ### @icon-info-circle Examples are great
 > This is a block quote with a header
 
-Here's a quick code block
+Here is a quick code block
 
 ```foxpro
 lnCount = 10

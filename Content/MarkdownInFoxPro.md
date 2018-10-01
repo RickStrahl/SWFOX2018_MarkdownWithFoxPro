@@ -12,6 +12,8 @@ Pretty quickly I found myself wishing most or all of my document interaction cou
 
 Today I write most of my documentation for products and components using Markdown. I write my blog posts using Markdown. The West Wind Message Board uses Markdown for messages that users can post. I enter product information in my online store using - you guessed it - Markdown. I work on two documentation tools and both use Markdown, one with data stored in FoxPro tables, and one with Markdown documents on disk. Heck I even wrote a popular Markdown Editor called [Markdown Monster](https://markdownmonster.west-wind.com) to provide an optimized editing experience and it turns out I'm not alone in using Markdown with some cool support features that I can build myself because Markdown is a non-proprietary format that can be easily enhanced because it's easy to simple inject text into a text document.
 
+<div style="page-break-after: always;"></div>
+
 ## What is Markdown?
 I gave a brief paragraph summary of Markdown above. Let me back this up with a more thourough discussion of what Markdown is. Let's start with a quick look at what Markdown looks like here inside of a Markdown editor that provides syntax highlighting for Markdown:
 
@@ -699,7 +701,6 @@ There are other things that Markdown is not good for. When talking about HTML, M
 
 In short, make sure you understand what you're using Markdown for and whether that makes sense. I think it's fairly easy to spot the edges where Markdown usage is not the best choice and also where it is. If you're dealing with mostly text data Markdown is probably a good fit. Know what works...
 
-<div style="page-break-after: always;"></div>
 
 
 ### Markdown for Notes and Todo Lists
@@ -728,6 +729,16 @@ For customers I tend to store my public notes in Git repositories along with the
 #### Markdown Monster Favorites
 Another super helpful feature in **Markdown Monster** that I use a lot is the **Favorites** feature. Favorites lets me pin individual Markdown documents like my Call Log and ToDo list or an entire folder on the searchable Favorites tab. This makes it very quick to find relevant content without keeping a ton of Markdown documents open all the time.
 
+## Summary
+Markdown is simple tech which at the surface seems like a throwback to earlier days of technology. But - to me at least - the simpler technology actually means better productivity and much better control over the document format. The simplicity of text means I get a fast editor, easy content focused editing and as an extra bonus as a developer I get the opportunity to hack on Markdown with code. It's just text so it's easy to handle custom syntax or otherwise manipulate the Markdown document.
+
+In fact, I went overboard on this and created my own Markdown Editor because frankly the tooling that has been out there for Windows really sucked. Markdown Monster is my vision of how I want a Markdown Editor to work. I write a lot and so a lot of first hand writing experience and convenience is baked into this editor and the Markdown processing that happens. If I was dealing with a proprietary format like Word, or even with just HTML, none of that would be possible. But because Markdown is just text there are lots of opportunities to manipulate both the Markdown itself in terms of (optional) UI editing experience as well the output generation. It's truly awesome what is possible.
+
+
+
 
 ### Resources
-* gist.github.com - Code Snippet Sharing
+* [Samples for this Paper]()
+* [gist.github.com](https://gist.github.com) - Code Snippet Sharing
+* [Markdown Monster](https://markdownmonster.west-wind.com)
+* [Kava Docs](https://kavadocs.com)
