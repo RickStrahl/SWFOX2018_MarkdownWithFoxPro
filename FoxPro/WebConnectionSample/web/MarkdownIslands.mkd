@@ -1,0 +1,44 @@
+<% 	
+	* VS Addin Comment: SourceFile="~\..\deploy\mdprocess.PRG"
+	pcPageTitle = "Markdown Islands" 	
+%>
+<% Layout="~/views/_layoutpage.wcs" %>
+
+<div class="container">
+    <div class="page-header-text">
+        <i class="far fa-list-alt"></i>
+        Markdown Islands
+    </div>
+
+
+    <p>Here is some static Markdown embedded into the page:</p>
+
+    <markdown>
+        ## Hello World from Markdown
+
+        The following text uses **Markdown** to render out
+        some basic HTML text into a page.
+
+        Advantages are:
+
+        * Easy to type
+        * No editor required
+        * Easy to learn
+
+        To learn more please visit:
+
+        * [Markdown Monster Web Site](https://markdownmonster.west-wind.com)
+
+        ![](https://markdownmonster.west-wind.com/docs/images/logo.png)
+    </markdown>
+</div>            
+
+<!-- remove sections if you're not using them -->
+<% section="headers" %>
+
+
+<% endsection %>
+
+<% section="scripts" %>
+
+<% endsection %>

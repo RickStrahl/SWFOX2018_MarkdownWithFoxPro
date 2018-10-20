@@ -1,0 +1,161 @@
+<%
+	* VS Addin Comment: SourceFile="~\..\deploy\YOUR_PROCESS_CLASS.PRG"
+	pcPageTitle = "Markdown Parser"
+
+    pcMarkdown = Request.Form("Message")
+    if empty(pcMarkdown)
+        TEXT TO pcMarkdown NOSHOW
+## Hello World from Markdown
+
+The following text uses **Markdown** to render out
+some basic HTML text into a page.
+
+Advantages are:
+
+* Easy to type
+* No editor required
+* Easy to learn
+
+Syntx code highlighting:
+
+```foxpro
+lcOutput = 0
+for x = 1 to 10 
+   lcOutput = lcOutput + TRANSFORM(x)
+endfor
+```
+
+To learn more please visit:
+
+* [Markdown Monster Web Site](https://markdownmonster.west-wind.com)
+
+![](https://markdownmonster.west-wind.com/docs/images/logo.png)
+        ENDTEXT
+    endif
+%>
+<% Layout="~/views/_layoutpage.wcs" %>
+
+<div class="container">
+    <div class="page-header-text">
+        <i class="fab fa-markdown"></i>
+        Markdown Parser
+    </div>
+
+    <markdown>
+        This example lets you type some markdown text and convert it into HTML when
+        click the button. Demonstrates basic Markdown parsing.
+    </markdown>
+
+    <form action="" method="post">
+
+        <div class="edit-toolbar">
+            <a id="btnBold" class="btn btn-sm btn-link" title="Make the selected text bold (ctrl-b)">
+                <i class="fa fa-bold"></i>
+            </a>
+
+            <a id="btnItalic" class="btn btn-sm btn-link" title="Make the selected text italic (ctrl-i)">
+                <i class="fa fa-italic"></i>
+            </a>
+
+            <a id="btnQuote" class="btn btn-sm btn-link hidable-xs" title="Quote and indent text. (ctrl-q)">
+                <i class="fa fa-quote-left"></i>
+            </a>
+
+            <a id="btnInlineCode" class="btn btn-sm btn-link hidable-xs" style="text-decoration: none" title="Inline code.">
+                <i>`</i><i class="fa fa-code"></i><i>`</i>
+            </a>
+
+            <a id="btnList" class="btn btn-sm btn-link hidable-xs" title="Turn lines into list items.">
+                <i class="fa fa-list"></i>
+            </a>
+
+            <span class="hidable-xs">|</span>
+
+            <a id="btnH2" class="btn btn-sm btn-link hidable-xs">
+                H2
+            </a>
+
+            <a id="btnH3" class="btn btn-sm btn-link hidable-xs">
+                H3
+            </a>
+
+            <a id="btnH4" class="btn btn-sm btn-link hidable-xs">
+                H4
+            </a>
+
+            <a id="btnH5" class="btn btn-sm btn-link hidable-xs">
+                H5
+            </a>
+        </div>
+        <div class="edit-toolbar-sub">
+            This editor uses <a href="https://helpbuilder.west-wind.com/Docs/_4il175mgd.htm" target="wwthreadsexternal" tabindex="-1">Markdown text format</a>. Please format any <b>code snippets</b> using the <i class="fa fa-code" style="background: #ccc"></i>  icon.
+        </div>
+
+        <!--<pre lang="markdown" id="Editor">
+        </pre>-->
+        <textarea id="Message" name="Message"
+                  style="min-height: 350px;padding: 5px; font-family: Consolas, Menlo, monospace; border: none;
+                  background: #333; width: 100% ; color: #fafafa "><%= Request.FormOrValue('Message',pcMarkdown) %></textarea>
+
+
+
+
+    </form>
+
+    <div id="Preview" class="message-list-body" style="font-size: 0.875em"></div>
+
+
+</div>
+
+<!-- remove sections if you're not using them -->
+<% section="headers" %>
+<% section="headers" %>
+<style>
+    .edit-toolbar {
+        padding: 5px;
+        background: #ddd;
+    }
+
+    .edit-toolbar-sub {
+        padding: 5px;
+        font-size: 0.8em;
+        background: #d3d3d3;
+    }
+
+    .edit-toolbar a {
+        padding: 0 8px;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    .modal {
+        z-index: 10000;
+        margin-top: 100px;
+    }
+
+    #Editor {
+        width: 100%;
+        height: 55vh;
+        min-height: 350px;
+    }
+</style>
+<% endsection %>
+
+<% section="scripts" %>
+<script src="lib/marked/marked.min.js"></script>
+<script src="scripts/ww.jquery.min.js"></script>
+<script src="MarkdownEditor.js"></script>
+
+
+<link rel="stylesheet" href="~/lib/highlightjs/styles/vs2015.css">
+<script src="~/lib/highlightjs/highlight.pack.js"></script>
+<script>
+    function highlightCode() {
+        var pres = document.querySelectorAll("pre>code");
+        for (var i = 0; i < pres.length; i++) {
+            hljs.highlightBlock(pres[i]);
+        }
+    }
+    highlightCode();
+</script>
+<% endsection %>

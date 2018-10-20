@@ -1,0 +1,93 @@
+<%
+	* VS Addin Comment: SourceFile="~\..\deploy\YOUR_PROCESS_CLASS.PRG"
+	pcPageTitle = "Markdown Parser"
+
+    pcMarkdown = Request.Form("Markdown")
+    if empty(pcMarkdown)
+
+TEXT TO pcMarkdown NOSHOW
+## Hello World from Markdown
+
+The following text uses **Markdown** to render out
+some basic HTML text into a page.
+
+Advantages are:
+
+* Easy to type
+* No editor required
+* Easy to learn
+
+To learn more please visit:
+
+* [Markdown Monster Web Site](https://markdownmonster.west-wind.com)
+
+![](https://markdownmonster.west-wind.com/docs/images/logo.png)
+
+### For Developers
+Markdown has support for code snippet formatting so you can have
+pretty formatted code snippets that are easily copied and pasted
+into text.
+
+```foxpro
+FUNCTION BrowserSync(lcUrl, lcPath, lcFiles)
+LOCAL lcBrowserSyncCommand
+
+lcOldPath = CURDIR()
+CD (lcPath)
+
+lcBrowserSyncCommand = "browser-sync start " +;
+                       "--proxy " + lcUrl + " " + ;
+                       "--files '" + lcFiles + "'"
+```
+ENDTEXT
+
+    endif
+%>
+<% Layout="~/views/_layoutpage.wcs" %>
+
+<div class="container">
+    <div class="page-header-text">
+        <i class="fab fa-markdown"></i>
+        Markdown Parser
+    </div>
+
+    <div class="alert alert-info text-sm small">
+        <i class="fa fa-info-circle"></i>
+        This example lets you type some markdown text and convert it into HTML when
+        click the button. Demonstrates basic Markdown parsing.
+    </div>
+
+    <form action="" method="post">
+        <%= HtmlTextArea("Markdown",pcMarkdown,
+        [ class="form-control"  style="height:450px;"]) %>
+
+        <button type="submit" id="btnSubmit" name="btnSubmit"
+                class="btn btn-primary margin-top">
+            <i class="fa fa-check text-success "></i> Preview
+        </button>
+    </form>
+
+    <hr />
+
+    <%= Markdown(pcMarkdown) %>
+</div>
+
+<!-- remove sections if you're not using them -->
+<% section="headers" %>
+
+<% endsection %>
+
+<% section="scripts" %>
+
+<link rel="stylesheet" href="~/lib/highlightjs/styles/vs2015.css">
+<script src="~/lib/highlightjs/highlight.pack.js"></script>
+<script>
+    function highlightCode() {
+        var pres = document.querySelectorAll("pre>code");
+        for (var i = 0; i < pres.length; i++) {
+            hljs.highlightBlock(pres[i]);
+        }
+    }
+    highlightCode();
+</script>
+<% endsection %>

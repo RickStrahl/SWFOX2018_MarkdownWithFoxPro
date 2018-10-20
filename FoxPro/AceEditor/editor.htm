@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+	<title>Markdown Editing</title>
+    <!--<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script>-->
+    <link rel="stylesheet" type="text/css" href="editor.css">
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/Ace/ace.js" charset="utf-8"></script>
+    <script src="scripts/Ace/ext-language_tools.js" charset="utf-8"></script>  
+    <script src="editorSettings.js"></script>
+    <!-- <script src="wwhelp_editor_spellchecking.js"></script> -->
+    <script src="editor.js"></script>
+    <script src="preview.js"></script>
+</head>
+<body>
+<pre lang="markdown" id="Editor">
+</pre>
+<div id="message"
+     style="display: none; position: absolute; right: 15px; bottom: 5px; padding: 10px; background: darkred; color: white; opacity: 0.90; border-radius: 4px"></div>
+<div id="spellfixes" style="display:none">
+</div>
+<div id="losefocus" style="display:none">
+</div>
+</body>
+</html>

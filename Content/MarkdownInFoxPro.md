@@ -1,5 +1,9 @@
 ﻿# Marking up the World with Markdown
 
+*prepared for:*  
+**Southwest Fox 2018**  
+*October 1st, 2018*
+
 Markdown has easily been one of the most influential technologies that have affected me in the last few years. Specifically it has changed how I work with documentation and a number of documents both for writing and also for text editing and content storage inside of applications.
 
 Markdown is a plain text representation of HTML typically. Markdown works using a relatively small set of easy to type markup mnemonics to represent many common document centric HTML elements like bold, italic, underlined text, ordered and unordered lists, links and images, code snippets, tables and more. This small set of markup directives is easy to learn and quick to type in any editor without special tools or applications.
@@ -48,10 +52,10 @@ Markdown is very easy to get started with, and after learning less than a handfu
 With Markdown you're always editing the raw document. The big benefit is **you always see what the markup looks like** because you are editing the raw document not some rendered version of it. This means if you use a dedicated Markdown Editor that helps embedding tags for you **you can see the raw tags that are embedded** as is. This makes it easy to learn Markdown because even if you use editor tooling you immediately see what that tooling does. Once you get familiar, many markdown 'directives' are quicker to simply type inline rather than relying on hotkeys or toolbar selections.
 
 ### Productivity  
-Markdown brings big productivity gains due to the simplicity involved in simply typing plain text and **not having to worry about formatting while writing**. To me (and many others) this can't be overstated. It's a minimalist approach, but it to me this greatly frees my mind from unneeded clutter to focus on the content I'm trying to create.
+Markdown brings big productivity gains due to the simplicity involved in simply typing plain text and **not having to worry about formatting while writing**. To me (and many others) this can't be overstated. I write a lot of large documents and this this is a s a minimalist approach. But to me this greatly frees my mind from unneeded clutter to focus on the content I'm trying to create.
 
 ### Edit with any Editor or Textbox
-Because Markdown is text, you don't need to use a special tool to edit it - any text editor, even NotePad will do, or if you're using it in an application a simple textbox does the trick in desktop apps or Web apps. It's also easy to enhance this simple interface with simple convenience features.
+Because Markdown is text, you don't need to use a special tool to edit it - any text editor, even NotePad will do, or if you're using it in an application a simple textbox does the trick in desktop apps or Web apps. It's also easy to enhance this simple interface with simple convenience features and because it's just plain text it's also very easy to build custom tooling that can embed complex text features like special markup, equations or publishing directives directly into the document. This is why there is a lot of Markdown related tooling available.
 
 ### Easy to Compare and Share
 Because Markdown is text it can be easily compared using Source Control tools like Git. Markdown text is mostly content, unlike HTML so source code comparisons aren't burdened by things HTML tags or worse binary files like Word.
@@ -271,7 +275,7 @@ This is some sample Markdown text. This text is **bold** and *italic*.
 <script>alert('Gotcha!')</script>
 Great it works!
 
-> #### @icon-info-circle Examples are great
+> ####  Examples are great
 > This is a block quote with a header
 ENDTEXT
 
@@ -738,7 +742,7 @@ In fact, I went overboard on this and created my own Markdown Editor because fra
 
 
 ### Resources
-* [Samples for this Paper]()
+* [Samples and Slides for this Paper](https://github.com/RickStrahl/SWFOX2018_MarkdownWithFoxPro/)
 * [gist.github.com](https://gist.github.com) - Code Snippet Sharing
 * [Markdown Monster](https://markdownmonster.west-wind.com)
 * [Kava Docs](https://kavadocs.com)
