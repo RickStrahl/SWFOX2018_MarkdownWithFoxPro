@@ -3,7 +3,10 @@
 %>
 <% Layout="~/views/_layoutpage.wcs" %>
 
-<div class="container" style="xmargin-top: 80px;">
+<div class="container" style="margin-top: 90px;">
+    <h3>created on: 
+    <%= FormatValue(DateTime(), "MMM dd, yyyy HH:mm") %></h3>
+    
     <%= pcMarkdown %>
 </div>
 

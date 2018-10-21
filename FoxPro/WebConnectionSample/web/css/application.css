@@ -86,8 +86,17 @@ pre code {
 }
 
 blockquote {
-    font-size: 1.14em;
+    background: #ecf5ff;
+    font-size: 1.04em;
+    padding: 10px 10px 10px 20px !important;
+    margin: 1.1em 1.3em 1.1em 1em;
+    border-left: 8px #507bac solid;
+    border-radius: 4px 0 0 4px;
 }
+    blockquote > p:last-child {
+        margin: 0;
+    }
+
 strong, b {
     font-weight: 600;
     color: #222;

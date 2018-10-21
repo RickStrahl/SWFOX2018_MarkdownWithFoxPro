@@ -41,10 +41,7 @@ To learn more please visit:
         Markdown Parser
     </div>
 
-    <markdown>
-        This example lets you type some markdown text and convert it into HTML when
-        click the button. Demonstrates basic Markdown parsing.
-    </markdown>
+
 
     <form action="" method="post">
 

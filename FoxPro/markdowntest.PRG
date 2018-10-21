@@ -33,7 +33,7 @@ RETURN
 #ENDIF
 
 *** Using a class
-#IF .F.
+#IF .t.
 
 
 TEXT TO lcMarkdown NOSHOW
@@ -70,7 +70,7 @@ RETURN
 
 
 
-#IF .T.
+#IF .F.
 *** using the Markdown function
 DO MarkdownParser
 

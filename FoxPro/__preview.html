@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>String To Code Converter</title>
+    <link href="https://unpkg.com/bootstrap@4.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <style>
+        body, html {
+            font-size: 16px;
+        }
+        body {
+            margin: 10px 40px;
+        }
+        blockquote {
+		    background: #f2f7fb;
+		    font-size: 1.02em;
+		    padding: 10px 20px;
+		    margin: 1.2em;
+		    border-left: 9px #569ad4 solid;
+		    border-radius: 4px 0 0 4px;
+		}
+        @media(max-width: 600px) 
+        {
+            body, html {
+                font-size: 14px !important;
+            }
+            body {
+                margin: 10px 10px !important;                
+            }
+        }
+    </style>
+</head>
+<body>
+	<div style="margin: 20px 5%">
+		<h3 id="what-am-i-on-about">What am I on about?</h3>
+<p>If you haven't used client side frameworks before and you don't know how browser syncing works here's a quick review. Browser syncing typically works via tooling that does two things:</p>
+<ul>
+<li>Monitors for files that have changed</li>
+<li>Refresh the browser when a file you care about is updated</li>
+<li>The page currently active is reloaded</li>
+</ul>
+<p>Sounds simple, right? But, yet it's a huge productivity improvement to automatically see changes you've made in the editor reflected in the <strong>live</strong> application which simply reloads with the changes anytime you make a code change.</p>
+<p>Here's some code:</p>
+<p>Most tools of this type these days are based on NodeJs and Browser Sync is no exception so you have to make sure you have Node installed.</p>
+<p><a href="https://nodejs.org/en/download/">Download and Install NodeJs</a></p>
+<p>Once Node is installed you have to install Browser Sync and you use NPM to do it. On a Windows or Powershell command window type:</p>
+<pre><code>npm install -g browser-sync
+</code></pre>
+<p>This installs browser sync <em>globally</em> onto your machine, which means it becomes available on the Windows path as a global tool.</p>
+<p>Next, still on the command line, navigate to the Web Root folder for your Web application. For example I might navigate to <code>c:\wconnect\web\wconnect</code> for the Web Connection sample site.</p>
+<p>Now you can start up browser sync to monitor your Web site (all on one line):</p>
+<pre><code>browser-sync start 
+   --proxy localhost/wconnect
+   --files '**/*.wcs,**/*.wc, **/*.wwd, **/*.blog, css/*.css, **/*.html, scripts/*.js'&quot;
+</code></pre>
+<p>I'm telling Browser Sync to watch all Css, scripts, and all of the templates in my project. Note I also tell it to <strong>proxy</strong> my existing URL. Browser Sync basically takes over the original URL and forwards it to a new URL on a new local port.</p>
+	</div>
+	
+	<script src="https://weblog.west-wind.com/scripts/highlightjs/highlight.pack.js"></script>
+	<link href="https://weblog.west-wind.com/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+	<script>
+		function highlightCode() {
+		    var pres = document.querySelectorAll("pre>code");
+		    for (var i = 0; i < pres.length; i++) {
+    		    hljs.highlightBlock(pres[i]);
+	    	}
+		}
+		highlightCode();
+	</script>	
+</body>
+</html>

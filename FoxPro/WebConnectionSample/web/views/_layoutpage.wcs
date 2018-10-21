@@ -19,7 +19,8 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/lib/fontawesome/css/all.min.css" rel="stylesheet" />
     <link href="~/css/application.css" rel="stylesheet" />
-    
+
+    <link href="~/css/markdown.css" rel="stylesheet" />
     <%= RenderSection("headers") %>
 
 </head>
