@@ -7,8 +7,7 @@ It's all roses and cauliflowers from here...
 
 Just relax and enjoy the ride.
 
-<div onmouseover="alert('jacked \'ya on hover!')" 
-     style="height: 20px; opacity: 0;">
+<div onmouseover="alert('jacked \'ya on hover!')" style="height: 20px; opacity: 0;">
      
 </div>
 

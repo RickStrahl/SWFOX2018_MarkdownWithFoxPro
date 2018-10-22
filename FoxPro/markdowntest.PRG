@@ -5,7 +5,7 @@ CLEAR
 
 
 *** Straight Code
-#IF .f.
+#IF .F.
 TEXT TO lcMarkdown NOSHOW
 # RAW MARKDOWN WITH Markdig
 
@@ -33,7 +33,7 @@ RETURN
 #ENDIF
 
 *** Using a class
-#IF .t.
+#IF .T.
 
 
 TEXT TO lcMarkdown NOSHOW
